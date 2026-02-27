@@ -7,9 +7,7 @@ import os
 
 st.set_page_config(page_title="Bug Bite Classifier", layout="centered")
 
-# =====================================================
-# Load Model from HuggingFace
-# =====================================================
+
 @st.cache_resource
 def load_model():
     model_path = hf_hub_download(
@@ -20,9 +18,6 @@ def load_model():
     return model
 
 
-# =====================================================
-# Prediction Function
-# =====================================================
 def predict_class(image, model):
 
     image = tf.convert_to_tensor(image, dtype=tf.float32)
@@ -34,10 +29,8 @@ def predict_class(image, model):
     return prediction
 
 
-# =====================================================
-# UI
-# =====================================================
-st.title("🦟 Bug Bite Classifier")
+
+st.title("Bug Bite Classifier")
 st.write("Upload an image to classify the type of bug bite.")
 
 model = load_model()
