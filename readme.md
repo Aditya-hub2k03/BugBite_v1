@@ -9,3 +9,5 @@
 </ol>
 
 <p><a href="https://www.kaggle.com/datasets/yogeeswarprojects/bugbite-v1/">DATASET</a></p>
+
+<p>Version Specific: Python - 3.10</p>
